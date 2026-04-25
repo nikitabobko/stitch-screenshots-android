@@ -2,11 +2,13 @@
 
 Simple Android app for stitching multiple screenshots into a single long screenshot.
 
-<img src="./screenshot.jpg" width="300">
-
 ## Installation
 
 - Download APK file from GitHub releases https://github.com/nikitabobko/stitch-screenshots-android/releases
+
+## Screenshots
+
+<img src="./screenshot.jpg" width="300">
 
 ## Building
 

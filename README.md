@@ -4,6 +4,10 @@ Simple Android app for stitching multiple screenshots into a single long screens
 
 <img src="./screenshot.jpg" width="300">
 
+## Installation
+
+- Download APK file from GitHub releases https://github.com/nikitabobko/stitch-screenshots-android/releases
+
 ## Building
 
 ```
@@ -15,6 +19,7 @@ keytool -genkey -v -keystore release.jks -keyalg RSA -validity 36500 -storepass 
 echo 'storePassword=******' >> ./local.properties
 echo 'keyAlias=mykey >> ./local.properties
 ./gradlew assembleRelease # ./app/build/outputs/apk/release/app-release.apk
+./build-release.sh # ./stitch-screenshots-android-v*.apk
 ```
 
 ## License

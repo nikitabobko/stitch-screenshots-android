@@ -4,7 +4,8 @@ Simple Android app for stitching multiple screenshots into a single long screens
 
 ## Installation
 
-- Download APK file from GitHub releases https://github.com/nikitabobko/stitch-screenshots-android/releases
+- Download the APK file directly from [GitHub releases](https://github.com/nikitabobko/stitch-screenshots-android/releases) (no automatic updates)
+- [Install via Obtainium](https://apps.obtainium.imranr.dev/redirect?r=obtainium://add/https://github.com/nikitabobko/stitch-screenshots-android) (Obtainium keeps track of updates)
 
 ## Screenshots
 

@@ -62,6 +62,14 @@ android {
         compose = true
     }
 
+    // Disable dependency info block in the resulting APK for build reproducibility
+    // By AI: dependency info block that AGP injects into the signing block.
+    // It's encrypted with a Google Play key and contains non-deterministic output
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     sourceSets["main"].apply {
         manifest.srcFile("AndroidManifest.xml")
         kotlin.directories.clear()

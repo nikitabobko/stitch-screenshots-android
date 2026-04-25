@@ -14,10 +14,10 @@ Simple Android app for stitching multiple screenshots into a single long screens
 
 ```
 # Debug
-./gradlew assembleDebug # ./app/build/intermediates/apk/debug/app-debug.apk
+./gradlew assembleDebug # ./app/build/outputs/apk/debug/app-debug.apk
 
 # Release
-keytool -genkey -v -keystore release.jks -keyalg RSA -validity 36500 -storepass ******
+keytool -genkey -v -keystore ./release.jks -keyalg RSA -validity 36500 -storepass ******
 echo 'storePassword=******' >> ./local.properties
 echo 'keyAlias=mykey >> ./local.properties
 ./gradlew assembleRelease # ./app/build/outputs/apk/release/app-release.apk

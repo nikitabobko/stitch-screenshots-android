@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+
+    <group
+        android:pivotX="54"
+        android:pivotY="54"
+        android:scaleX="0.7"
+        android:scaleY="0.7">
+
+        <!-- Top screenshot -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M34,20 L74,20 C76.2,20 78,21.8 78,24 L78,48 L30,48 L30,24 C30,21.8 31.8,20 34,20 Z" />
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="2.5"
+            android:fillColor="#00000000"
+            android:pathData="M34,20 L74,20 C76.2,20 78,21.8 78,24 L78,48 L30,48 L30,24 C30,21.8 31.8,20 34,20 Z" />
+        <!-- Lines on top screenshot -->
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="1.5"
+            android:pathData="M38,30 L70,30" />
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="1.5"
+            android:pathData="M38,36 L62,36" />
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="1.5"
+            android:pathData="M38,42 L66,42" />
+
+        <!-- Overlap/stitch indicator -->
+        <path
+            android:fillColor="#FF6B00"
+            android:pathData="M30,48 L78,48 L78,60 L30,60 Z"
+            android:fillAlpha="0.3" />
+        <path
+            android:strokeColor="#FF6B00"
+            android:strokeWidth="2"
+            android:pathData="M30,48 L78,48" />
+        <path
+            android:strokeColor="#FF6B00"
+            android:strokeWidth="2"
+            android:pathData="M30,60 L78,60" />
+
+        <!-- Bottom screenshot -->
+        <path
+            android:fillColor="#FFFFFF"
+            android:pathData="M30,60 L78,60 L78,84 C78,86.2 76.2,88 74,88 L34,88 C31.8,88 30,86.2 30,84 L30,60 Z" />
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="2.5"
+            android:fillColor="#00000000"
+            android:pathData="M30,60 L78,60 L78,84 C78,86.2 76.2,88 74,88 L34,88 C31.8,88 30,86.2 30,84 L30,60 Z" />
+        <!-- Lines on bottom screenshot -->
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="1.5"
+            android:pathData="M38,66 L66,66" />
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="1.5"
+            android:pathData="M38,72 L58,72" />
+        <path
+            android:strokeColor="#1A73E8"
+            android:strokeWidth="1.5"
+            android:pathData="M38,78 L70,78" />
+    </group>
+</vector>

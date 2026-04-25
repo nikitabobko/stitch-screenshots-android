@@ -1,10 +1,17 @@
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+import java.util.Properties
 
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
+
+val localProps = rootProject.file("local.properties")
+    .takeIf { it.exists() }
+    ?.reader()
+    ?.use { reader -> Properties().apply { load(reader) } }
+    ?: Properties()
 
 android {
     namespace = "bobko.stitch_screenshots"
@@ -18,10 +25,20 @@ android {
         versionName = "1.0"
     }
 
+    signingConfigs {
+        create("release") {
+            storeFile = rootProject.file("release.jks")
+            storePassword = localProps["storePassword"] as String?
+            keyAlias = localProps["keyAlias"] as String? ?: "mykey"
+            keyPassword = localProps["keyPassword"] as String? ?: storePassword
+        }
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 

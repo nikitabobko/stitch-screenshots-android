@@ -3,7 +3,6 @@ import java.util.Properties
 
 plugins {
     id("com.android.application")
-    id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.plugin.compose")
 }
 
@@ -60,6 +59,7 @@ android {
 
     buildFeatures {
         compose = true
+        resValues = true
     }
 
     // Disable dependency info block in the resulting APK for build reproducibility
@@ -74,7 +74,8 @@ android {
         manifest.srcFile("AndroidManifest.xml")
         kotlin.directories.clear()
         kotlin.directories.add("src")
-        res.setSrcDirs(listOf("res"))
+        res.directories.clear()
+        res.directories.add("res")
     }
 }
 

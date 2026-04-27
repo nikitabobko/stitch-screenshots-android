@@ -6,5 +6,5 @@ cd "$(dirname "$0")"
 # set -x # Print shell commands as they are executed (or you can try -v which is less verbose)
 
 ./gradlew assembleRelease
-cp ./app/build/outputs/apk/release/app-release.apk \
-    "stitch-screenshots-android-v$(grep versionName app/build.gradle.kts | grep --only-matching -E "\d+(\.\d+)*").apk"
+cp ./build/outputs/apk/release/StitchScreenshots-release.apk \
+    "stitch-screenshots-android-v$(grep versionName build.gradle.kts | grep --only-matching -E "\d+(\.\d+)*").apk"

@@ -36,7 +36,7 @@ android {
     buildTypes {
         debug {
             applicationIdSuffix = ".debug"
-            resValue("string", "app_name", "Stitch Screenshots (Debug)")
+            resValue("string", "app_name", "(D) Stitch Screenshots")
         }
         release {
             resValue("string", "app_name", "Stitch Screenshots")

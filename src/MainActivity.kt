@@ -13,6 +13,7 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.activity.result.PickVisualMediaRequest
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.gestures.awaitEachGesture
@@ -121,7 +122,7 @@ fun StitchScreenshotsApp() {
 
     var relaunchPicker: Any by remember { mutableStateOf(constAny) }
     val photoPicker = rememberLauncherForActivityResult(
-        contract = ActivityResultContracts.OpenMultipleDocuments()
+        contract = ActivityResultContracts.PickMultipleVisualMedia()
     ) { uris: List<Uri> ->
         if (uris.size == 1) {
             Toast.makeText(context, "Please select at least 2 images", Toast.LENGTH_SHORT).show()
@@ -138,7 +139,13 @@ fun StitchScreenshotsApp() {
         images.addAll(newImages)
         repeat(maxOf(0, newImages.size - 1)) { junctions.add(JunctionCrop()) }
     }
-    fun launchPhotoPicker() = photoPicker.launch(arrayOf("image/*"))
+
+    fun launchPhotoPicker() = photoPicker.launch(
+        PickVisualMediaRequest(
+            mediaType = ActivityResultContracts.PickVisualMedia.ImageOnly,
+            isOrderedSelection = true
+        )
+    )
 
     LaunchedEffect(relaunchPicker) {
         if (relaunchPicker != constAny) {
